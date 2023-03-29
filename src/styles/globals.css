@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "SabonBold";
+  src: local("Sabon_Bold"),
+  url('/fonts/Sabon_Bold.ttf')
+  format("truetype");
+}
+
 
 html, 
 body, 
 #__next {
   height: 100%;
-  width: 100%
+  width: 100%;
+  background-color: #F5F5F5;
+  min-width: 390px;
 }
