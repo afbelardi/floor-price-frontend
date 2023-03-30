@@ -6,7 +6,8 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
-  const search = useRef(null);
+  const searchRef = useRef(null);
+
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ export default function Home() {
       </Head>
       <Header />
       <SearchBar
-      ref={search}
+      searchRef={searchRef}
       />
       
     </>
