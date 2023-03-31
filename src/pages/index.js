@@ -9,7 +9,9 @@ export default function Home() {
 
   const searchRef = useRef(null);
   const [searchedCollection, setSearchedCollection] = useState({});
-  const [wasSearched, setWasSearched] = useState(false)
+  const [wasSearched, setWasSearched] = useState(false);
+  const [loading, setIsLoading] = useState(false);
+  
 
   return (
     <>
