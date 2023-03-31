@@ -3,10 +3,13 @@ import Header from '../components/Header';
 import { useRef, useState } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import CurrentCard from '../components/CurrentCard';
 
 export default function Home() {
 
   const searchRef = useRef(null);
+  const [searchedCollection, setSearchedCollection] = useState({});
+  const [wasSearched, setWasSearched] = useState(false)
 
   return (
     <>
@@ -20,6 +23,15 @@ export default function Home() {
       <SearchBar
       searchRef={searchRef}
       />
+      {
+        wasSearched ?
+        <CurrentCard
+        searchedCollection={searchedCollection}
+        setSearchedCollection={setSearchedCollection}
+        /> : ''
+      }
+
+
       
     </>
   )

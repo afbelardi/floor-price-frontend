@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       minWidth: {
         '390': '390px'
+      },
+      fontFamily: {
+        'damn': ['DAMN', 'sans-serif']
       }
     },
   },

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "SabonBold";
-  src: local("Sabon_Bold"),
-  url('/fonts/Sabon_Bold.ttf')
+  font-family: "DAMN";
+  src: local("DAMN"),
+  url('/fonts/DAMN.ttf')
   format("truetype");
 }
 
