@@ -10,7 +10,7 @@ export default function Home() {
   const searchRef = useRef(null);
   const [searchedCollection, setSearchedCollection] = useState({});
   const [wasSearched, setWasSearched] = useState(false);
-  const [loading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   
 
   return (
@@ -24,6 +24,12 @@ export default function Home() {
       <Header />
       <SearchBar
       searchRef={searchRef}
+      loading={loading}
+      setLoading={setLoading}
+      searchedCollection={searchedCollection}
+      setSearchedCollection={setSearchedCollection}
+      setWasSearched={setWasSearched}
+      wasSearched={setWasSearched}
       />
       {
         wasSearched ?
