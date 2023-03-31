@@ -18,9 +18,9 @@ export default function SearchBar(props) {
             console.error(error)
         }
     }
-    // const changeLoading = () => {
-    //     props.setLoading(true)
-    // }
+    const changeLoading = () => {
+        props.setLoading(true)
+    }
     
     return (
         <>
@@ -29,7 +29,7 @@ export default function SearchBar(props) {
                 {
                    props.loading ? 
                    < Oval /> :
-                   <button className="w-20 h-10 ml-4 rounded-md bg-slate-500" onClick={handleSubmit}>TEST</button> 
+                   <button className="w-20 h-10 ml-4 rounded-md bg-slate-500" onClick={(e) => {handleSubmit(e); changeLoading()}}>TEST</button> 
                 }
                 
             </div>
