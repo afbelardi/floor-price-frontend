@@ -8,17 +8,19 @@ export default function SearchBar(props) {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { searchRef, setLoading, setSearchedCollection } = props;
+        const { searchRef, setLoading, setWasSearched, setSearchedCollection } = props;
             setLoading(true)
         if (searchRef.current.value === '') {
             setBadEntry(true)
             setLoading(false)
         } else {
+            setBadEntry(false)
             try {
                 const response = await axios.post('http://localhost:8000/search', {
                       searchTerm: props.searchRef.current.value
                   }
                 ); 
+                setWasSearched(true)
                 setSearchedCollection(response.data);
                 setLoading(false)
               } catch (error) {
