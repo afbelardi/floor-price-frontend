@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { useState } from 'react';
 import { Oval } from 'react-loading-icons';
 
@@ -8,28 +8,24 @@ export default function SearchBar(props) {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-          const response = await axios.post('http://localhost:8000/search', {
-                searchTerm: props.searchRef.current.value
-            }
-          );
-          if (response.status === 200) {
-            props.setWasSearched(true)
-          }
-          console.log(response.data)
-          props.setSearchedCollection(response.data);
-          
-          props.setLoading(false)
-          if (response.data === 'No Collection Provided') {
-            setBadEntry(true) 
-          }
-        } catch (error) {
-            console.error(error)
+        const { searchRef, setLoading, setSearchedCollection } = props;
+            setLoading(true)
+        if (searchRef.current.value === '') {
+            setBadEntry(true)
+            setLoading(false)
+        } else {
+            try {
+                const response = await axios.post('http://localhost:8000/search', {
+                      searchTerm: props.searchRef.current.value
+                  }
+                ); 
+                setSearchedCollection(response.data);
+                setLoading(false)
+              } catch (error) {
+                  console.error(error)
+              }
         }
-    }
-    
-    const changeLoading = () => {
-        props.setLoading(true)
+        
     }
     
     return (
@@ -42,7 +38,7 @@ export default function SearchBar(props) {
                    stroke="#98ff98"
                    className="ml-3"
                    /> :
-                   <button className="w-20 h-10 ml-4 rounded-md bg-slate-500" onClick={(e) => {handleSubmit(e); changeLoading()}}>Search</button> 
+                   <button className="w-20 h-10 ml-4 rounded-md bg-slate-500" onClick={handleSubmit}>Search</button> 
                 }
                 
             </div>
