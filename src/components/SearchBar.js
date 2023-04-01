@@ -40,7 +40,7 @@ export default function SearchBar(props) {
                    stroke="#98ff98"
                    className="ml-3"
                    /> :
-                   <button className="w-20 h-10 ml-4 rounded-md bg-slate-500" onClick={handleSubmit}>Search</button> 
+                   <button className="w-20 h-10 ml-4 rounded-md bg-gradient-to-tr from-gray-200 to-indigo-200" onClick={handleSubmit}>Search</button> 
                 }
                 
             </div>
