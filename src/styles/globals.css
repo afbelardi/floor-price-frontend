@@ -22,7 +22,7 @@ body,
 #__next {
   height: 100%;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: black;
   min-width: 390px;
   overflow-x: none;
 }

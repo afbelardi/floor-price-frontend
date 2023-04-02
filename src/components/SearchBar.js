@@ -41,8 +41,8 @@ export default function SearchBar(props) {
     
     return (
         <>
-            <div className="flex flex-col items-center mt-64 h-1/6">
-                <h1 className="text-3xl font-gilroy whitespace-nowrap">Search for a Collection</h1>
+            <div className="flex flex-col items-center bg-black mt-28 h-2/6">
+                <h1 className="text-3xl text-white font-gilroy whitespace-nowrap">Search for a Collection</h1>
                 <section className="flex items-end justify-center w-full h-1/2">
                     <input className={inputClass} onChange={handleInput} placeholder="Cryptoon Goonz" type="text" ref={props.searchRef}></input>
                     {
