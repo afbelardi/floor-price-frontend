@@ -9,6 +9,13 @@
   format("truetype");
 }
 
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: local("Gilroy-ExtraBold"),
+  url('/fonts/Gilroy-ExtraBold.otf')
+  format("truetype");
+}
+
 
 html, 
 body, 

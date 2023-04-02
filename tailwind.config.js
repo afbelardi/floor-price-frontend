@@ -9,7 +9,8 @@ module.exports = {
         '390': '390px'
       },
       fontFamily: {
-        'damn': ['DAMN', 'sans-serif']
+        'damn': ['DAMN', 'sans-serif'],
+        'gilroy': ['Gilroy-ExtraBold', 'sans-serif']
       }
     },
   },
