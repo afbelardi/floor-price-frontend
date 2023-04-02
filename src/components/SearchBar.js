@@ -34,13 +34,14 @@ export default function SearchBar(props) {
     const handleInput = () => {
         setHasTyped(true)
     }
+    
     const inputClass = `w-2/5 h-12 text-center focus:outline-none placeholder-gray-500 placeholder-opacity-50 rounded-2xl ${badEntry ? 'border-red-500 bg-red-400 placeholder-slate-700 opacity-30 placeholder-opacity-100 border-2' : ''} ${hasTyped ? 'bg-white border-none' : ''}`
 
    
     
     return (
         <>
-            <div className="flex flex-col items-center mt-10 h-1/6">
+            <div className="flex flex-col items-center mt-64 h-1/6">
                 <h1 className="text-3xl font-gilroy whitespace-nowrap">Search for a Collection</h1>
                 <section className="flex items-end justify-center w-full h-1/2">
                     <input className={inputClass} onChange={handleInput} placeholder="Cryptoon Goonz" type="text" ref={props.searchRef}></input>
