@@ -12,6 +12,7 @@ export default function Home() {
   const [searchedCollection, setSearchedCollection] = useState({});
   const [wasSearched, setWasSearched] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [watchedNFTs, setWatchedNFTs] = useState([]);
   
 
   return (
@@ -39,7 +40,10 @@ export default function Home() {
         setSearchedCollection={setSearchedCollection}
         /> : ''
       }
-      <Watched />
+      <Watched 
+      watchedNFTs={watchedNFTs}
+      setWatchedNFTs={setWatchedNFTs}
+      />
 
       
     </>

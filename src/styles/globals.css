@@ -20,9 +20,10 @@
 html, 
 body, 
 #__next {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: black;
   min-width: 390px;
   overflow-x: none;
+  overflow-y: scroll;
 }

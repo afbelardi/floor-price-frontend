@@ -35,7 +35,7 @@ export default function SearchBar(props) {
         setBadEntry(false)
     }
     
-    const inputClass = `w-2/5 h-12 text-center focus:outline-none placeholder-gray-500 placeholder-opacity-50 rounded-2xl ${badEntry ? 'border-red-400 bg-red-300 placeholder-slate-700 placeholder-opacity-100 border-2' : ''}`
+    const inputClass = `w-2/5 h-12 text-center focus:outline-none placeholder-gray-500 font-gilroy placeholder-opacity-50 rounded-2xl ${badEntry ? 'border-red-400 bg-red-300 placeholder-slate-700 placeholder-opacity-100 border-2' : ''}`
 
     const searchSection = (
         <section className="flex items-end justify-center w-full h-2/4">
@@ -53,7 +53,7 @@ export default function SearchBar(props) {
    
     return (
         <>
-            <div className="flex flex-col items-center mt-48 bg-black h-1/6">
+            <div className="flex flex-col items-center bg-black mt-28 h-1/6">
                 <h1 className="text-3xl text-white font-gilroy whitespace-nowrap">Search for a Collection</h1>
                 {searchSection}   
             </div>
