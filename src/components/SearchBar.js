@@ -44,7 +44,7 @@ export default function SearchBar(props) {
                     props.loading ? 
                     <Oval 
                     stroke="#98ff98"
-                    className="ml-3"
+                    className="mb-1.5 ml-3"
                     /> :
                     <button className="w-20 h-12 ml-4 text-sm font-medium text-center rounded-lg shadow-lg font-gilroy bg-gradient-to-tr from-gray-200 to-indigo-200 hover:bg-gradient-to-bl focus:outline-none shadow-slate-500/50" onClick={handleSubmit}>Search</button> 
                 }    
