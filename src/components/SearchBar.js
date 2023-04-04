@@ -17,7 +17,7 @@ export default function SearchBar(props) {
         } else {
             setBadEntry(false)
             try {
-                const response = await axios.post('http://localhost:8000/search', {
+                const response = await axios.post('https://floor-price-backend.herokuapp.com/search', {
                       searchTerm: props.searchRef.current.value
                   }
                 ); 
