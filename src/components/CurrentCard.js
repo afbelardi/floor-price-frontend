@@ -9,13 +9,13 @@ export default function CurrentCard (props) {
                 <section className="flex items-start w-5/12 pt-6 pl-6">
                     <img src={props.searchedCollection.nftImage} className="rounded-md w-3/3"/>
                 </section>
-                    <ul className="flex flex-col w-1/2 pt-6">
-                        <li className="flex flex-col h-24 mb-4"> 
-                            <h2 className="text-xl font-gilroy text-slate-500">Collection Name</h2>
-                            <p className="text-2xl text-black font-gilroy">{props.searchedCollection.collectionName}</p>
+                    <ul className="flex flex-col w-3/5 pt-6">
+                        <li className="flex flex-col mb-4 h-22"> 
+                            <h2 className="mb-2 text-xl font-gilroy text-slate-500">Collection Name</h2>
+                            <p className="text-2xl leading-tight text-black font-gilroy">{props.searchedCollection.collectionName}</p>
                         </li>
                         <li className="flex flex-col h-16"> 
-                            <h2 className="text-xl font-gilroy text-slate-500">Floor Price</h2>
+                            <h2 className="mb-2 text-xl font-gilroy text-slate-500">Floor Price</h2>
                             <p className="text-2xl text-black font-gilroy">{props.searchedCollection.floorPrice}</p>
                         </li>
                     </ul>
